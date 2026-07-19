@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>True or False – Play & Conquer</title>
+  <link rel="stylesheet" href="../css/truefalse.css">
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Play & Conquer</h1>
+  <p>True or False – Test Your Concepts</p>
+  <button id="theme-toggle">🌙</button>
+</header>
+
+<main>
+  <div class="game-container">
+    <div id="question">Loading...</div>
+    <div class="buttons">
+      <button onclick="checkAnswer(true)">✅ True</button>
+      <button onclick="checkAnswer(false)">❌ False</button>
+    </div>
+    <div id="score"></div>
+    <div class="controls">
+      <button onclick="startGame()">🔄 Play Again</button>
+      <a href="../index.html" class="home-button">🏠 Home</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Play & Conquer | Made with ❤️ by Aswin | S4 BSc Computer Science</p>
+</footer>
+
+<script src="../js/truefalse.js"></script>
+<script src="../js/theme-toggle.js"></script>
+</body>
+</html>

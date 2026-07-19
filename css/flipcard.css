@@ -1,0 +1,141 @@
+/* Base Theme */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Container for Cards */
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 70vh;
+  position: relative;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 160px;  /* ⬅️ Increased from 120px to 160px */
+  position: relative;
+  min-height: 500px;
+}
+
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(calc(var(--i) * 72deg)) 
+             translate(180px) 
+             rotate(calc(var(--i) * -72deg));
+  transform-origin: center;
+}
+             translate(180px) 
+             rotate(calc(var(--i) * -72deg));
+  transform-origin: center;
+}
+@media (max-width: 600px) {
+  .card {
+    top: 58%;
+    transform: rotate(calc(var(--i) * 72deg)) 
+               translate(120px) 
+               rotate(calc(var(--i) * -72deg));
+  }
+
+  .card-container {
+    margin-top: 180px;
+    min-height: 400px;
+  }
+}
+
+
+
+
+
+
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  width: 220px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #1f1c2c, #2c3e50);
+  box-shadow: 0 4px 10px rgba(253, 110, 10, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, #fd6e0a, #ff8c42);
+  color: #1a1a1d;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Buttons */
+.btn-group {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-group button {
+  padding: 0.5rem 1.2rem;
+  margin: 0.5rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-group button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+a button {
+  text-decoration: none;
+}
+
+/* Game Header */
+.game-header h2 {
+  text-align: center;
+  font-family: var(--font-accent);
+  color: var(--color-primary);
+}

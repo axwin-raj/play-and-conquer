@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapid Fire – Play & Conquer</title>
+  <link rel="icon" href="../images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/rapidfire.css" />
+</head>
+<body>
+  <header>
+    <h1>Rapid Fire</h1>
+    <p>Test Your Reflex & Knowledge ⚡</p>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <div class="game-container">
+      <div id="question-box">
+        <h2 id="question">Loading...</h2>
+        <div class="options" id="options"></div>
+        <div class="timer">⏳ Time Left: <span id="timer">5</span>s</div>
+      </div>
+
+      <div id="result-box" class="hidden">
+        <h2>🔥 Rapid Fire Result</h2>
+        <p id="score-text"></p>
+        <button onclick="startGame()">Play Again 🔄</button>
+        <a href="../index.html"><button>🏠 Home</button></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Play & Conquer | Made with ❤️ by Aswin | S4 BSc Computer Science</p>
+  </footer>
+
+  <script src="../js/rapidfire.js"></script>
+  <script src="../js/theme.js"></script>
+</body>
+</html>

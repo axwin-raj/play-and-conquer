@@ -1,0 +1,243 @@
+/* 🌑 Root Variables */
+:root {
+  --font-primary: 'Poppins', sans-serif;
+  --font-accent: 'Oxanium', cursive;
+
+  --color-bg: #1a1a1d;
+  --color-text: #eaeaea;
+
+  --color-primary: #fd6e0a;
+  --color-primary-hover: #ff8c42;
+
+  --transition-time: 0.3s;
+}
+
+/* 🌞 Light Theme */
+body.light {
+  --color-bg: #f9f9f9;
+  --color-text: #222;
+}
+
+/* 🖥️ Body Styling */
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-time), color var(--transition-time);
+}
+
+/* 🎯 Header */
+header {
+  background: var(--color-primary);
+  color: white;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-family: var(--font-accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+header p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* 🌗 Theme Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color var(--transition-time), color var(--transition-time);
+  font-family: var(--font-primary);
+  z-index: 1100;
+}
+
+#theme-toggle:hover {
+  background-color: var(--color-primary);
+  color: #1a1a1d;
+}
+
+/* 📦 Main Container */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* 🏷️ Section Title */
+.game-zones h3 {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+/* 🎮 Game Zones Layout */
+.game-zones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* 🧡 Default Zone Box */
+.zone {
+  background: linear-gradient(135deg, #1f1c2c, #2c3e50);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  box-shadow:
+    0 4px 12px rgba(253, 110, 10, 0.3),
+    inset 0 0 10px rgba(253, 110, 10, 0.05);
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.4s ease;
+}
+
+.zone:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow:
+    0 12px 25px rgba(253, 110, 10, 0.6),
+    inset 0 0 14px rgba(253, 110, 10, 0.2);
+}
+
+/* ✨ Shine Effect */
+.zone::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(253, 110, 10, 0.15) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg) translateX(-150%);
+  transition: transform 1.2s ease;
+  pointer-events: none;
+}
+
+.zone:hover::before {
+  transform: rotate(25deg) translateX(150%);
+}
+
+/* 🏆 Zone Titles */
+.zone h4 {
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-primary);
+}
+
+/* 🔗 Zone Links */
+.zone ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zone ul li {
+  margin-bottom: 0.8rem;
+}
+
+.zone ul li a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #f5b97d;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.zone ul li a:hover,
+.zone ul li a:focus {
+  background-color: var(--color-primary);
+  color: #1f1c2c;
+  font-weight: 700;
+  outline: none;
+}
+
+/* ⚙️ Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  box-shadow: 0 -3px 7px rgba(0,0,0,0.5);
+  user-select: none;
+}
+
+/* 🌞 Light Theme Tweaks */
+body.light header {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.light #theme-toggle {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.light #theme-toggle:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+body.light .zone {
+  background-color: rgba(74, 144, 226, 0.05);
+  color: var(--color-text);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
+}
+
+body.light .zone:hover {
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+body.light .zone h4 {
+  color: var(--color-primary);
+}
+
+body.light .zone ul li a {
+  color: var(--color-primary);
+}
+
+body.light .zone ul li a:hover,
+body.light .zone ul li a:focus {
+  background-color: var(--color-primary);
+  color: white;
+}

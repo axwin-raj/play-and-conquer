@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz – Play & Conquer</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Play & Conquer</h1>
+    <p>Quiz – Test Your Knowledge</p>
+    <button id="theme-toggle" aria-label="Toggle Dark/Light Theme">🌙</button>
+  </header>
+
+  <main>
+    <div class="quiz-container">
+      <h2 id="question">Loading...</h2>
+      <div id="options" class="options"></div>
+      <div id="feedback"></div>
+      <button id="next-btn" class="next-btn">Next</button>
+      <div class="controls">
+        <button onclick="restartQuiz()">🔄 Restart</button>
+        <a href="../index.html" class="home-btn">🏠 Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Play & Conquer | Made with ❤️ by Aswin | S4 BSc Computer Science</p>
+  </footer>
+
+  <script src="../js/quiz.js"></script>
+  <script src="../js/theme-toggle.js"></script>
+</body>
+</html>

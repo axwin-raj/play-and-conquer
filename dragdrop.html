@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drag & Drop – Play & Conquer</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dragdrop.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Play & Conquer</h1>
+    <p>Drag & Drop – Match Correctly</p>
+    <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+  </header>
+
+  <main>
+    <section class="game-area">
+      <h2>Match the Terms with Definitions</h2>
+
+      <div class="drag-container">
+        <div class="terms">
+          <h3>Terms</h3>
+          <div id="terms"></div>
+        </div>
+
+        <div class="definitions">
+          <h3>Definitions</h3>
+          <div id="definitions"></div>
+        </div>
+      </div>
+
+      <div class="result" id="result"></div>
+
+      <div class="buttons">
+        <button onclick="initGame()">🔄 Restart</button>
+        <button onclick="window.location.href='index.html'">🏠 Home</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Play & Conquer | Made with ❤️ by Aswin | S4 BSc Computer Science
+  </footer>
+
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/dragdrop.js"></script>
+</body>
+</html>

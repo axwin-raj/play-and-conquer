@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Output – Play & Conquer</title>
+  <link rel="stylesheet" href="css/guessoutput.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Guess the Output</h1>
+    <p>Test your logic and code understanding!</p>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <h2>Find the Correct Output</h2>
+    <div class="question-box">
+      <pre id="code-snippet">Loading...</pre>
+    </div>
+
+    <div class="options">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+
+    <div class="result" id="result"></div>
+    <div class="score" id="score">Score: 0</div>
+
+    <div class="buttons">
+      <button onclick="loadQuestion()">🔄 Next</button>
+      <a href="index.html" class="home-button">🏠 Home</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Play & Conquer | Made with ❤️ by Aswin | S4 BSc Computer Science
+  </footer>
+
+  <script src="js/guessoutput.js"></script>
+  <script src="js/theme-toggle.js"></script>
+</body>
+</html>

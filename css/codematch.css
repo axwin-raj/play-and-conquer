@@ -1,0 +1,93 @@
+.match-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.column {
+  background: linear-gradient(135deg, #1f1c2c, #2c3e50);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(253, 110, 10, 0.4);
+  width: 300px;
+}
+
+.column h3 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-accent);
+}
+
+.item {
+  background-color: rgba(253, 110, 10, 0.1);
+  margin: 0.7rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.item:hover {
+  background-color: rgba(253, 110, 10, 0.25);
+}
+
+/* ✨ Selection Animation */
+.item.selected {
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 0 12px var(--color-primary);
+  transform: scale(1.05);
+  background-color: rgba(253, 110, 10, 0.15);
+}
+
+/* ✅ Correct Match */
+.item.correct {
+  border-color: limegreen;
+  background-color: rgba(50, 205, 50, 0.2);
+  color: lime;
+}
+
+/* ❌ Wrong Match */
+.item.wrong {
+  border-color: crimson;
+  background-color: rgba(220, 20, 60, 0.15);
+  color: crimson;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-primary);
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+}
+
+.buttons {
+  text-align: center;
+  margin: 2rem;
+}
+
+.buttons button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.buttons button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .match-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
